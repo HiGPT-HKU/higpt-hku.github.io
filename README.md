@@ -1,9 +1,8 @@
-# GraphGPT
-## Graph Instruction Tuning for Large Language Models
+# HiGPT: Heterogeneous Graph Language Model
 
-This is the repository that contains the source code for the [GraphGPT project page](https://graphgpt.github.io/).
+This is the repository that contains the source code for the [HiGPT project page](https://higpt-hku.github.io/).
 
-If you use GraphGPT in your project, please kindly cite:
+If you use HiGPT in your project, please kindly cite:
 ```
 
 ```

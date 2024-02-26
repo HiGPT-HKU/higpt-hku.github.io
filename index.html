@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="description"
-          content="GraphGPT: Graph Instruction Tuning for Large Language Models">
+          content="HiGPT: Heterogeneous Graph Language Model">
     <meta name="keywords" content="Graph learning, Large Language Models">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GraphGPT</title> 
+    <title>HiGPT</title> 
 
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -22,7 +22,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
           rel="stylesheet">
-    <link rel="icon" href="./static/tjb_images/logo_4.png">
+    <!-- <link rel="icon" href="./static/tjb_images/logo_4.png"> -->
     <link rel="stylesheet" href="./static/css/bulma.min.css">
     <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
@@ -42,6 +42,46 @@
 </head>
 <body>
 
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="navbar-menu">
+          <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+            <a class="navbar-item" href="https://tjb-tech.github.io">
+            <span class="icon">
+                <i class="fas fa-home"></i>
+            </span>
+            </a>
+      
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                More Research
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="https://graphgpt.github.io">
+                  GraphGPT
+                </a>
+                <a class="navbar-item" href="https://higpt-hku.github.io">
+                  HiGPT
+                </a>
+                <a class="navbar-item" href="https://urban-gpt.github.io/">
+                  UrbanGPT
+                </a>
+                <a class="navbar-item" href="https://llmrec.github.io/">
+                  LLMRec
+                </a>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </nav>
+
 
 <section class="hero">
     <div class="hero-body">
@@ -49,9 +89,8 @@
             <div class="columns is-centered">
                 <div class="column has-text-centered">
                     <h1 class="title is-1 publication-title"
-                        style="display: flex;flex-direction: row;align-items: center;justify-content: center;margin-bottom: 5px;"><img
-                            src="./static/tjb_images/logo_4.png" width="60" height="60" style="margin-right: 10px;">GraphGPT:</h1>
-                    <h1 class="title is-2 publication-title">Graph Instruction Tuning for Large Language Models</h1>
+                        style="display: flex;flex-direction: row;align-items: center;justify-content: center;margin-bottom: 5px;">HiGPT:</h1>
+                    <h1 class="title is-2 publication-title">Heterogeneous Graph Language Model</h1>
                     <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://tjb-tech.github.io/">Jiabin Tang</a>,</span>
@@ -64,8 +103,7 @@
               <a href="https://harryshil.github.io/">Lei Shi</a>,</span>
               <br> <!-- 这里是换行标签 -->
                         <span class="author-block">
-              <a href="#">Lixin Su</a>,</span>
-              <a href="#">Suqi Cheng</a>,</span>
+              <a href="#">Long Xia</a>,</span>
               <a href="https://www.yindawei.com/">Dawei Yin</a>,</span>
               <a href="https://sites.google.com/view/chaoh">Chao Huang</a><sup>*</sup>,
             <!-- </span> -->
@@ -87,7 +125,7 @@
                         <div class="publication-links">
                             <!-- PDF Link. -->
                             <span class="link-block">
-                <a href="https://arxiv.org/abs/2310.13023"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -97,7 +135,7 @@
               </span>
 
                             <span class="link-block">
-                <a href="https://huggingface.co/Jiabin99/GraphGPT-7B-mix-all" target="_blank"
+                <a href="https://huggingface.co/Jiabin99/HiGPT-7B" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fa fa-laugh"></i>
@@ -108,7 +146,7 @@
 
                             <!-- Code Link. -->
                             <span class="link-block">
-                <a href="https://github.com/HKUDS/GraphGPT"
+                <a href="https://github.com/HKUDS/HiGPT"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -119,7 +157,7 @@
 
 
                             <span class="link-block">
-                <a href="https://huggingface.co/datasets/Jiabin99/Arxiv-PubMed-mix-NC-LP" target="_blank"
+                <a href="#" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fa fa-database"></i>
@@ -158,10 +196,36 @@
         <!-- Abstract. -->
         <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
+                <!-- <h2 class="title is-2">TL;DR: </h2> -->
+                <!-- <div class="content has-text-justified"> -->
+                    <!-- <p> -->
+                        <!-- <ul>
+                            <li><b>One Model for Any Heterogeneous Graph</b></li>
+                            <li><b>Few-shot Training with Instruction Augmentation</b></li>
+                            <li><b>1-shot Beat 60-shot with Graph In-Context Learning</b></li>
+                        </ul> -->
+                        <h4 class="title is-4">One Model for Any Heterogeneous Graph</h4>
+                        <h4 class="title is-4">Few-shot Training with Instruction Augmentation</h4>
+                        <h4 class="title is-4">1-shot Beat 60-shot with Graph In-Context Learning</h4>
+                    <!-- </p> -->
+                <!-- </div> -->
+            </div>
+        </div>
+        <!--/ Abstract. -->
+
+        <br>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
                 <h2 class="title is-2">Abstract</h2>
                 <div class="content has-text-justified">
                     <p>
-                        Graph Neural Networks (GNNs) have advanced graph structure understanding via recursive information exchange and aggregation among graph nodes. To improve model robustness, self-supervised learning (SSL) has emerged as a promising approach for data augmentation. However, existing methods for generating pre-trained graph embeddings often rely on fine-tuning with specific downstream task labels, which limits their usability in scenarios where labeled data is scarce or unavailable. To address this, our research focuses on advancing the generalization capabilities of graph models in challenging zero-shot learning scenarios. Inspired by the success of large language models (LLMs), we aim to develop a graph-oriented LLM that can achieve high generalization across diverse downstream datasets and tasks, even without any information available from the downstream graph data. In this work, we present the <b>GraphGPT</b> framework that aligns LLMs with graph structural knowledge with a graph instruction tuning paradigm. Our framework incorporates a text-graph grounding component to establish a connection between textual information and graph structures. Additionally, we propose a dual-stage instruction tuning paradigm, accompanied by a lightweight graph-text alignment projector. This paradigm explores self-supervised graph structural signals and task-specific graph instructions, to guide LLMs in understanding complex graph structures and improving their adaptability across different downstream tasks. Our framework is evaluated on supervised and zero-shot graph learning tasks, demonstrating superior generalization and outperforming state-of-the-art baselines.
+                        Heterogeneous graph learning aims to capture complex relationships and diverse relational semantics among entities in a heterogeneous graph to obtain meaningful representations for nodes and edges. Recent advancements in heterogeneous graph neural networks (HGNNs) have achieved state-of-the-art performance by considering relation heterogeneity and using specialized message functions and aggregation rules. However, existing frameworks for heterogeneous graph learning have limitations in generalizing across diverse heterogeneous graph datasets. Most of these frameworks follow the "pre-train" and "fine-tune" paradigm on the same dataset, which restricts their capacity to adapt to new and unseen data. This raises the question: "Can we generalize heterogeneous graph models to be well-adapted to diverse downstream learning tasks with distribution shifts in both node token sets and relation type heterogeneity?" To tackle those challenges, we propose <b>HiGPT</b>, a general large graph model with <u>H</u>eterogeneous graph <u>i</u>nstruction-tuning paradigm. Our framework enables learning from arbitrary heterogeneous graphs without the need for any fine-tuning process from downstream datasets. To handle distribution shifts in heterogeneity, we introduce an in-context heterogeneous graph tokenizer that captures semantic relationships in different heterogeneous graphs, facilitating model adaptation. We incorporate a large corpus of heterogeneity-aware graph instructions into our HiGPT, enabling the model to effectively comprehend complex relation heterogeneity and distinguish between various types of graph tokens. Furthermore, we introduce the Mixture-of-Thought (MoT) instruction augmentation paradigm to mitigate data scarcity by generating diverse and informative instructions. Through comprehensive evaluations conducted in various settings, our proposed framework demonstrates exceptional performance in terms of generalization performance, surpassing current leading benchmarks.
                     </p>
                 </div>
             </div>
@@ -184,16 +248,16 @@
         <!-- Architecture -->
         <div class="columns is-centered">
             <div class="column is-full-width">
-                <h4 class="title is-3">• Architecture</h4>
+                <h4 class="title is-3">• Methodology</h4>
 
                 <div class="content has-text-justified">
-                    <img class="columns is-centered has-text-centered" src="./static/images/framework.png" alt="Teaser" width="95%"
+                    <img class="columns is-centered has-text-centered" src="./static/images/overview.png" alt="Teaser" width="95%"
                          style="margin:0 auto">
                     <br>
                     <figcaption>
                         <p style="text-align: center;">
                             <font color="061E61">
-                                <b>Figure 1:</b> The overall architecture of our proposed GraphGPT with graph instruction tuning paradigm.
+                                <b>Figure 1:</b> The overall architecture of our HiGPT.
                             </font>
                         </p>
                     </figcaption>
@@ -201,27 +265,38 @@
                     <p>
                     <ul>
                         <li>
-                            <b>Structural Information Encoding with Text-Graph Grounding.</b> To enhance the understanding of graph structural information by large language models, our framework emphasizes aligning the encoding of graph structures with the natural language space. This alignment aims to enable language models to effectively comprehend and interpret the structural elements of the graph, leveraging their inherent language understanding capabilities. To achieve this objective, we introduce a text-graph grounding paradigm that generates prompts designed to preserve the graph’s structural context for language models. This paradigm acts as a bridge, connecting the semantic understanding of textual information with the inherent structural relationships found within the graph.
-                            <img class="columns is-centered has-text-centered" src="./static/images/config.png" alt="Teaser" width="50%"
-                         style="margin:0 auto">
+                            <b>In-Context Heterogeneous Graph Tokenizer.</b> To achieve adaptability in a wide range of heterogeneous graph sce- narios with varying node and edge types, we introduce the in- context heterogeneous graph tokenizer. This tokenizer captures the diverse semantic relationships found in different heterogeneous graphs, providing a unified approach. To optimize performance and integrate the tokenizer seamlessly into the HiGPT framework, we employ pre-training with a lightweight text-graph contrastive alignment paradigm.
+                            
 
-                        <figcaption>
-                        <p style="text-align: center;">
-                            <font color="061E61">
-                                <b>Figure 2:</b> Workflow of text-structure alignment.
-                            </font>
-                        </p>
-                    </figcaption>
+                        
 
                             
                         </li>
                         <li>
-                            <b>Dual-Stage Graph Instruction Tuning.</b>
-                            The dual-stage graph instruction tuning paradigm proposed in this work builds upon the concept of instruction tuning, which has been recently introduced to enhance the adaptability of language models for specific domains [45]. In this paradigm, we aim to align the language capacity of the model with the nuances of graph learning tasks, enabling the language model to generate more accurate and contextually appropriate responses for graph-structured data.
+                            <b>Heterogeneous Graph Instruction-Tuning.</b>
+                            We intro- duce a novel heterogeneous graph instruction-tuning framework that integrates inter-type and intra-type token matching tasks to fine-tune large language models (LLMs). Our framework specifically targets the enhancement of LLMs' understanding of both heterogeneous relation awareness and homogeneous relation awareness. By utilizing these tasks, our aim is to bolster the LLMs' capabilities in the following areas: (i) distinguishing between different types of graph tokens, (ii) comprehending intricate relationships within heterogeneous graphs, (iii) preserving the distinctive attributes of entities within homogeneous graphs, and (iv) effectively harnessing diverse graph instructions during the training process.
+                            <img class="columns is-centered has-text-centered" src="./static/images/instruction.png" alt="Teaser" width="100%"
+                         style="margin:0 auto">
+                            <figcaption>
+                                <p style="text-align: center;">
+                                    <font color="061E61">
+                                        <b>Figure 2:</b> Prompts for the three tasks of heterogeneous graph instruction-tuning.
+                                    </font>
+                                </p>
+                            </figcaption> 
                         </li>
                         <li>
-                            <b>Chain-of-Thought (CoT) Distillation.</b>
-                            When faced with diverse graph data, language models may encounter new or unfamiliar patterns and structures. This distribution shift can pose challenges in generating accurate and coherent responses, especially when the number of node classes varies across different types of graph data. To address this challenge and boost accuracy in the presence of distribution shift, it is essential to equip our GraphGPT with step-by-step reasoning abilities. In this regard, we propose utilizing the Chain-of-Thought (COT) technique [47], which explicitly models the flow of thoughts and reasoning steps. By incorporating COT, our language model improves the coherence and consistency of generated text. It enables the model to follow a logical progression of ideas, enhancing its ability to understand and reason about the given graph data.
+                            <b>Mixture-of-Thought Augmentation.</b>
+                            Our approach introduces a novel mechanism for augmenting graph instructions, emphasizing the use of Mixture-of-Thought (MoT) combined with various prompting techniques. This integration enables us to gen- erate a diverse and comprehensive set of informative task-specific instructions. By seamlessly incorporating these augmented graphinstructions into our framework, we anticipate that our model enhancement will effectively address the challenge of data sparsity.
+                            <img class="columns is-centered has-text-centered" src="./static/images/mot.png" alt="Teaser" width="60%"
+                         style="margin:0 auto">
+                            <figcaption>
+                                <p style="text-align: center;">
+                                    <font color="061E61">
+                                        <b>Figure 3:</b> Mixture-of-Thought (MoT) Augmentation.
+                                    </font>
+                                </p>
+                            </figcaption>
                         </li>
                     </ul>
                     </p>
@@ -234,7 +309,7 @@
         </div>
 
         <!-- Inference -->
-        <div class="columns is-centered">
+        <!-- <div class="columns is-centered">
             <div class="column is-full-width">
                 <h2 class="title is-3">• Instruction Design</h2>
 
@@ -257,7 +332,7 @@
                 <br/>
 
             </div>
-        </div>
+        </div> -->
 
         <!-- Alignment -->
 <!--         <div class="columns is-centered">
@@ -324,45 +399,30 @@
                 </div>
                 <br/> -->
 
-                <h4 class="title is-4">Overall Performance</h4>
+                <h4 class="title is-4">Overall Performance Comparison</h4>
                 <p>
-                    We conduct experiments on the node classification task, evaluating both supervised and zero-shot scenarios. The overall performance is presented in Table 1. Supervised Task Settings: We train the models on a specific dataset and evaluated their performance on the corresponding test set (e.g., training on Arxiv-Arxiv and testing on the Arxiv test set). Zero-Shot Task Settings: We train the models on a specific dataset and test them on other datasets without any additional training (e.g., training on Arxiv-PubMed and testing on the PubMed dataset). To account for variations in the number of classes across different datasets, we employed a classifier trained with transfer data, typically a linear layer, when testing GNN-based models. In Table 1, "-7B-" represents the parameter scale, while "-v1.1-" and "-v1.5-" indicate different versions of the base Vicuna model. "-stage2" indicates that only the second stage tuning is adopted. "-std" and "-cot" denote the use of the standard and generated COT instruction datasets, respectively.
+                    We performed node classification tasks on three datasets, exploring both few-shot and zero-shot settings. In the few-shot settings, our model was trained on the IMDB dataset with shot numbers ranging from 1 to 60, and evaluated on the IMDB test set of 1,000 samples. For the zero-shot settings, the model was trained on the IMDB dataset with the same shot numbers, and tested on separate test sets from the DBLP and ACM datasets, each containing 1,000 samples. To enable cross-dataset transferability in supervised heterogeneous Graph Neural Networks (GNNs), we unified node and edge categories, and utilized a classifier trained with transfer data to accommodate variations in class quantities across datasets.
+                    For self-supervised methods focused on learning embeddings for downstream heterogeneous graph nodes, we excluded the zero-shot settings. The overall performance is partially shown in Table 1, with detailed results. "-std" and "-cot" notations represent the standard test prompt with direct answers and the prompt with a Chain-of-Thought (CoT) feature, respectively. These details provide insights into our node classification experiments in both supervised and zero-shot settings.
                 </p>
-                <img class="columns is-centered has-text-centered" src="./static/images/result1.png" alt="Teaser" width="100%" style="margin:0 auto">
+                <img class="columns is-centered has-text-centered" src="./static/images/performance.png" alt="Teaser" width="100%" style="margin:0 auto">
                     <figcaption>
                         <p style="text-align: center;">
                             <font color="061E61">
-                                <b>Figure 4:</b> Performance comparison of various methods on node classification under both supervised and zero-shot settings.
+                                <b>Table 1:</b> Performance comparison on node classification tasks in both few-shot and zero-shot settings. However, since SSL methods focus on learning embeddings from downstream graphs, we excluded the zero-shot settings for them ("-").
                             </font>
                         </p>
                     </figcaption>
 
 
-                <h4 class="title is-4">Generalization for Multitasking Graph Learner.</h4>
+                <h4 class="title is-4">Model Ablation Test.</h4>
                 <p>
-                       we explore the generalization ability of our model by incorporating more instruction data to fine-tune the LLM for effectively handling various types of tasks.
+                    To evaluate the proposed modules' effectiveness, we individually remove the key techniques in HiGPT. The results are summarized in Table 2.
                 </p>
-                <img class="columns is-centered has-text-centered" src="./static/images/result2.png" alt="Teaser" width="50%" style="margin:0 auto">
+                <img class="columns is-centered has-text-centered" src="./static/images/ablation.png" alt="Teaser" width="50%" style="margin:0 auto">
                     <figcaption>
                         <p style="text-align: center;">
                             <font color="061E61">
-                                <b>Figure 5:</b> Performance comparison of various instruction mixtures in supervised learning on the Arxiv dataset and the zero-shot setting on the Cora dataset for node classification.
-                            </font>
-                        </p>
-                    </figcaption>
-
-
-
-
-                <h4 class="title is-4">Ablation Study</h4>
-                <p>
-                    We conduct an ablation study to investigate the individual contributions of different sub-modules of our proposed framework, and the results are reported in Table 4. 
-                </p>
-                <img class="columns is-centered has-text-centered" src="./static/images/result3.png" alt="Teaser" width="50%" style="margin:0 auto">
-                    <figcaption>
-                        <p style="text-align: center;">
-                            <font color="061E61">
-                                <b>Figure 6:</b> Module ablation study under both supervised and zero-shot settings to analyze the individual contributions.
+                                <b>Table 2:</b>  Ablation study of our HiGPT.
                             </font>
                         </p>
                     </figcaption>
@@ -370,33 +430,34 @@
 
 
 
-                <h4 class="title is-4">Time and Space Efficiency.</h4>
+                <h4 class="title is-4">Graph In-Context Learning</h4>
                 <p>
-                    Study on the time and space efficiency of our GraphGPT during both the training and inference stages.
+                    In-context learning (ICL) is a method for adapting large language models (LLMs) to new tasks without gradient updates, using a prompt with task examples. In this subsection, we explore the impact of Graph In-Context Learning on improving HiGPT's performance. We conduct comprehensive tests by adding prefatory examples from the training set to models trained with different shots of IMDB data. We randomly sampled training examples corresponding to the test data. "-ICL-1" and "-ICL-2" denote one and two prefatory examples, respectively. "-ICL-DBLP" signifies the inclusion of DBLP examples before the ACM test prompt. The results, depicted in Figure 5.  
                 </p>
-                <img class="columns is-centered has-text-centered" src="./static/images/result4.png" alt="Teaser" width="50%" style="margin:0 auto">
+                <img class="columns is-centered has-text-centered" src="./static/images/icl.png" alt="Teaser" width="95%" style="margin:0 auto">
                     <figcaption>
                         <p style="text-align: center;">
                             <font color="061E61">
-                                <b>Figure 7:</b> Study on the time and space efficiency of our GraphGPT during both the training and inference stages.
+                                <b>Figure 5:</b> Comprehensive results of graph in-context learning of our HiGPT.
                             </font>
                         </p>
                     </figcaption>
 
 
-                <h4 class="title is-4">Model Inference Efficiency.</h4>
+
+
+                <h4 class="title is-4">Case Study.</h4>
                 <p>
-                    The study aims to assess the computational efficiency of our model during both the model training and inference stages.
+                    We perform a case study to showcase our HiGPT's robust generalization in understanding complex graph structures with diverse nodes and connections. Our model generates graph-aware predictions and responses, demonstrating its profound comprehension and awareness of graph-related aspects. Furthermore, we validate the positive impact of our MoT instruction augmentation.
                 </p>
-                <img class="columns is-centered has-text-centered" src="./static/images/result5.png" alt="Teaser" width="50%" style="margin:0 auto">
+                <img class="columns is-centered has-text-centered" src="./static/images/case_study.png" alt="Teaser" width="100%" style="margin:0 auto">
                     <figcaption>
                         <p style="text-align: center;">
                             <font color="061E61">
-                                <b>Figure 8:</b> Inference efficiency study of our GraphGPT Training Efficiency with Graph Instruction Tuning.
+                                <b>Table 3:</b>  Visualization of our HiGPT’s response with different prompting engineering techniques on IMDB for action genre.
                             </font>
                         </p>
                     </figcaption>
-                    
                 
             </div>
         </div>
@@ -1751,10 +1812,10 @@
     <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
         <pre><code>@articles{tang2023graphgpt,
-            title={GraphGPT: Graph Instruction Tuning for Large Language Models}, 
-            author={Jiabin Tang and Yuhao Yang and Wei Wei and Lei Shi and Lixin Su and Suqi Cheng and Dawei Yin and Chao Huang},
-            year={2023},
-            eprint={2310.13023},
+            title={HiGPT: Graph Instruction Tuning for Large Language Models}, 
+            author={Jiabin Tang and Yuhao Yang and Wei Wei and Lei Shi and Long Xia and Dawei Yin and Chao Huang},
+            year={2024},
+            eprint={2402.xxxx},
             archivePrefix={arXiv},
             primaryClass={cs.CL}
       }
